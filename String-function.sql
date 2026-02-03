@@ -22,5 +22,5 @@ Select cust_name,Ucase(cust_name) as uppercase from customer;
 Select company, Lcase(company) as lowercase from customer;
 
 -- merge or concatenate cust_name and company name as full name is customer table.
-Select cust_name, company,country,concat(cust_name ,",",country)as names from customer;
+Select cust_name,country,concat(cust_name ,",",country)as names from customer;
 
