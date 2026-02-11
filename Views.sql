@@ -42,12 +42,43 @@ Where r.user_id=o.user_id)
 Order by Max(r.total_price) desc limit 1;
 
 
-use college_dataset;
-select *from student_data;
+use company;
+select *from employee;
 
 Create view  age_table as 
-Select *from student_data where age>20 ;
+Select *from employee where age>25;
 
-Select *from age_table;
+select *from employee;
+-- Insert the values-- 
+Insert INTO employee(emp_id,emp_name,age,salary) values
+(2,'Rizwan',30,55000.90) ;
+
+Insert INTO employee(emp_id,emp_name,age,salary) values
+(3,'Arzan',30,55000.90) ;
+Select *from employee;
+
+-- Updatable Views 
+-- Rule no-1 Single table
+-- Rule no-2 subgroup groupby, distinct
+
+update employee set name='Zuheb khan' where age='30';
+Select *from employee;
+
+-- Delete data-- 
+delete from employee where name='Rizwan';
+Select *from employee;
+
+-- with check option
+Create view age_status as
+Select *from employee where age=25
+with check option;
+
+Insert INTO age_status(emp_id,emp_name,age,salary) values
+(4,'Aazil',10,55000.90) ;
+
+Select *from age_status;
+
+
+
 
 
