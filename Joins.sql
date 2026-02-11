@@ -113,6 +113,7 @@ Select *from employee;
 Select e.emp_name , e.address, d.dept_name, d.location from employee e
 Inner join departments d
 On  e.dept_id=d.dept_Id;
+
 -- Where condition for using Inner joins 
 Select e.emp_name , e.address, d.dept_name, d.location from employee e
 Inner join departments d
